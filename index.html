@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>50ft Bounty Unc Mural | $BOUNTYUNC</title>
+  <meta name="description" content="50ft Bounty Unc Mural — the biggest Unc on Solana. $BOUNTYUNC memecoin painted 50 feet tall on the wall." />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="paint-splatter splatter-1"></div>
+  <div class="paint-splatter splatter-2"></div>
+  <div class="paint-splatter splatter-3"></div>
+
+  <nav class="nav">
+    <a href="#" class="nav-logo">
+      <img src="logo.png" alt="BOUNTYUNC logo" />
+      <span>$BOUNTYUNC</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#countdown">Bounty</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#proposal">Proposal</a></li>
+      <li><a href="#proof">Proof</a></li>
+      <li><a href="#tokenomics">Tokenomics</a></li>
+      <li><a href="#buy">How to Buy</a></li>
+      <li><a href="#chart">Chart</a></li>
+      <li><a href="#socials">Socials</a></li>
+    </ul>
+    <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=uncpump" target="_blank" rel="noopener" class="btn btn-primary nav-cta">Buy Now</a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-bg">
+      <img src="banner.png" alt="50ft Bounty Unc Mural banner" class="hero-banner" width="2172" height="724" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">Solana Memecoin</div>
+      <h1 class="hero-title">
+        <span class="title-line">50ft Bounty</span>
+        <span class="title-line title-accent">Unc Mural</span>
+      </h1>
+      <p class="hero-ticker">$BOUNTYUNC</p>
+      <p class="hero-tagline">Painted 50 feet tall. Built different. Unc energy on-chain.</p>
+      <div class="hero-actions">
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=uncpump" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Buy on Pump.fun</a>
+        <a href="#proof" class="btn btn-outline btn-lg">Watch the Proof</a>
+      </div>
+      <div class="ca-box">
+        <span class="ca-label">Contract</span>
+        <code class="ca-address" id="caAddress">uncpump</code>
+        <button class="btn-copy" id="copyCa" aria-label="Copy contract address">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          <span>Copy</span>
+        </button>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- PUMP.FUN GO BOUNTY COUNTDOWN -->
+    <section id="countdown" class="section countdown">
+      <div class="container">
+        <div class="countdown-card">
+          <div class="countdown-top">
+            <span class="countdown-platform">Pump.fun GO Bounty</span>
+            <a href="https://pump.fun/go/5396af28-16a4-4cf1-a1e5-caca2a461518" target="_blank" rel="noopener" class="countdown-link">View on Pump.fun →</a>
+          </div>
+          <h2 class="countdown-title">Paint a 50ft Unc Mural</h2>
+          <div class="countdown-reward">
+            <span class="reward-label">Reward</span>
+            <span class="reward-amount" id="bountyReward">$2,479</span>
+          </div>
+          <p class="countdown-sub">Bounty ends in</p>
+          <div class="countdown-timer" id="countdownTimer" aria-live="polite">
+            <div class="time-block">
+              <span class="time-value" id="cdDays">--</span>
+              <span class="time-label">Days</span>
+            </div>
+            <span class="time-sep">:</span>
+            <div class="time-block">
+              <span class="time-value" id="cdHours">--</span>
+              <span class="time-label">Hours</span>
+            </div>
+            <span class="time-sep">:</span>
+            <div class="time-block">
+              <span class="time-value" id="cdMinutes">--</span>
+              <span class="time-label">Minutes</span>
+            </div>
+            <span class="time-sep">:</span>
+            <div class="time-block">
+              <span class="time-value" id="cdSeconds">--</span>
+              <span class="time-label">Seconds</span>
+            </div>
+          </div>
+          <p class="countdown-status" id="countdownStatus">Syncing with Pump.fun…</p>
+          <a href="https://pump.fun/go/5396af28-16a4-4cf1-a1e5-caca2a461518" target="_blank" rel="noopener" class="btn btn-primary btn-lg countdown-cta">Submit on Pump.fun GO</a>
+        </div>
+        <div class="countdown-detail">
+          <span class="countdown-detail-tag">The Brief</span>
+          <p class="countdown-detail-text">
+            We want someone to create a massive 50-foot mural of Unc somewhere it'll be seen. The bigger and bolder the better. Document the full process from blank wall to finished piece and show the final result in context.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">The Mural</span>
+          <h2>About</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-visual">
+            <div class="about-frame">
+              <img src="logo.png" alt="Unc mural being painted on building" />
+              <div class="frame-tag">50 FT TALL</div>
+            </div>
+          </div>
+          <div class="about-text">
+            <h3>The Biggest Unc on the Blockchain</h3>
+            <p>
+              <strong>50ft Bounty Unc Mural</strong> ($BOUNTYUNC) is a Solana memecoin born from real street art energy — 
+              a massive mural of the legendary Unc, painted fifty feet high on a city wall for the whole world to see.
+            </p>
+            <p>
+              This isn't just another token. It's proof that Unc culture goes hard IRL and on-chain. 
+              From cherry picker to chart pumper, the mural lives forever and so does the community.
+            </p>
+            <ul class="about-stats">
+              <li>
+                <span class="stat-num">50ft</span>
+                <span class="stat-label">Mural Height</span>
+              </li>
+              <li>
+                <span class="stat-num">$BOUNTYUNC</span>
+                <span class="stat-label">Ticker</span>
+              </li>
+              <li>
+                <span class="stat-num">SOL</span>
+                <span class="stat-label">Chain</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROPOSAL -->
+    <section id="proposal" class="section proposal">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">The Vision</span>
+          <h2>UNC Giant Mural Proposal</h2>
+        </div>
+        <div class="proposal-content">
+          <p class="proposal-lead">
+            This submission includes the concept design for a <strong>50-foot UNC mural</strong> intended for a highly visible public location. The artwork features the UNC mascot in a bold, eye-catching style designed to maximize community engagement and brand visibility.
+          </p>
+          <div class="proposal-included">
+            <h3>Included</h3>
+            <ul class="proposal-list">
+              <li>Mural concept artwork</li>
+              <li>Location mockup and scale reference</li>
+              <li>Documentation plan covering the entire creation process from blank wall to completed mural</li>
+              <li>Final rendered examples showing the mural in its surrounding environment</li>
+            </ul>
+          </div>
+          <p class="proposal-goal">
+            The goal is to create a landmark piece of public art that promotes UNC while generating strong social media exposure through photos, videos, and community sharing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROOF -->
+    <section id="proof" class="section proof">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Real Art. Real Proof.</span>
+          <h2>The Proof</h2>
+        </div>
+        <p class="proof-intro">
+          Watch the mural come to life — unc gets painted 50 feet tall. No AI slop. No fake hype. Just raw Unc energy on concrete.
+        </p>
+        <div class="video-wrapper">
+          <div class="video-frame">
+            <video id="proofVideo" controls playsinline poster="logo.png">
+              <source src="1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-graffiti">PROOF SESSION</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOKENOMICS -->
+    <section id="tokenomics" class="section tokenomics">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">On-Chain</span>
+          <h2>Tokenomics</h2>
+        </div>
+        <div class="token-grid">
+          <div class="token-card">
+            <div class="token-icon">🎨</div>
+            <h3>100% Community</h3>
+            <p>Fair launch on Pump.fun. No presale, no insider bags. The mural belongs to the people.</p>
+          </div>
+          <div class="token-card">
+            <div class="token-icon">🔥</div>
+            <h3>Liquidity Burned</h3>
+            <p>LP burned at launch. Unc doesn't rug — he paints walls and holds the line.</p>
+          </div>
+          <div class="token-card">
+            <div class="token-icon">🚫</div>
+            <h3>Zero Tax</h3>
+            <p>No buy/sell tax. Swap freely on Pump.fun and take your Unc gains.</p>
+          </div>
+          <div class="token-card">
+            <div class="token-icon">♾️</div>
+            <h3>Supply</h3>
+            <p>Pump.fun standard supply. One billion tokens of pure mural memetic power.</p>
+          </div>
+        </div>
+        <div class="token-details">
+          <div class="detail-row">
+            <span>Name</span>
+            <strong>50ft Bounty Unc Mural</strong>
+          </div>
+          <div class="detail-row">
+            <span>Ticker</span>
+            <strong>$BOUNTYUNC</strong>
+          </div>
+          <div class="detail-row">
+            <span>Network</span>
+            <strong>Solana</strong>
+          </div>
+          <div class="detail-row">
+            <span>CA</span>
+            <strong>uncpump</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO BUY -->
+    <section id="buy" class="section buy">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get In</span>
+          <h2>How to Buy</h2>
+        </div>
+        <div class="buy-steps">
+          <div class="step">
+            <div class="step-num">01</div>
+            <h3>Get a Wallet</h3>
+            <p>Download Phantom, Solflare, or Backpack. Create a wallet and fund it with SOL.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">02</div>
+            <h3>Connect to Pump.fun</h3>
+            <p>Head to the swap link below and connect your wallet to Pump.fun.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">03</div>
+            <h3>Swap SOL → $BOUNTYUNC</h3>
+            <p>Paste CA <code>uncpump</code>, set slippage if needed, and ape the mural.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">04</div>
+            <h3>Join the Crew</h3>
+            <p>Follow socials, share the proof video, and rep the 50ft Unc everywhere.</p>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=uncpump" target="_blank" rel="noopener" class="buy-link-card primary">
+            <span class="link-icon">⚡</span>
+            <div>
+              <strong>Buy on Pump.fun</strong>
+              <span>Swap SOL for $BOUNTYUNC</span>
+            </div>
+            <span class="link-arrow">→</span>
+          </a>
+          <a href="https://dexscreener.com/solana/uncpump" target="_blank" rel="noopener" class="buy-link-card">
+            <span class="link-icon">📊</span>
+            <div>
+              <strong>DexScreener</strong>
+              <span>Live chart & analytics</span>
+            </div>
+            <span class="link-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUMPFUN / CHART EMBED -->
+    <section id="chart" class="section chart">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Live</span>
+          <h2>Pump.fun & Chart</h2>
+        </div>
+        <div class="embed-grid">
+          <div class="embed-box">
+            <div class="embed-header">
+              <h3>Pump.fun Swap</h3>
+              <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=uncpump" target="_blank" rel="noopener">Open full screen →</a>
+            </div>
+            <iframe
+              src="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=uncpump&embed=1"
+              title="Pump.fun Swap Embed"
+              allow="clipboard-write; wallet"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="embed-box">
+            <div class="embed-header">
+              <h3>DexScreener</h3>
+              <a href="https://dexscreener.com/solana/uncpump" target="_blank" rel="noopener">Open full screen →</a>
+            </div>
+            <iframe
+              src="https://dexscreener.com/solana/uncpump?embed=1&loadChartSettings=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
+              title="DexScreener Chart"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIALS -->
+    <section id="socials" class="section socials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Community</span>
+          <h2>Socials</h2>
+        </div>
+        <p class="socials-intro">Rep the mural. Tag your bags. Unc is watching.</p>
+        <div class="social-grid">
+          <a href="https://x.com" target="_blank" rel="noopener" class="social-card">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <span>X / Twitter</span>
+          </a>
+          <a href="https://t.me" target="_blank" rel="noopener" class="social-card">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            <span>Telegram</span>
+          </a>
+          <a href="https://pump.fun/go/5396af28-16a4-4cf1-a1e5-caca2a461518" target="_blank" rel="noopener" class="social-card">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            <span>Pump.fun GO</span>
+          </a>
+          <a href="https://dexscreener.com/solana/uncpump" target="_blank" rel="noopener" class="social-card">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3v18h18V3H3zm16 16H5V5h14v14zM7 15h2V9H7v6zm4 0h2V7h-2v8zm4 0h2v-4h-2v4z"/></svg>
+            <span>DexScreener</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="logo.png" alt="BOUNTYUNC" />
+        <div>
+          <strong>50ft Bounty Unc Mural</strong>
+          <span>$BOUNTYUNC on Solana</span>
+        </div>
+      </div>
+      <p class="footer-disclaimer">
+        $BOUNTYUNC is a memecoin with no intrinsic value. This is not financial advice. 
+        DYOR. The mural is real — the gains are on you.
+      </p>
+      <p class="footer-copy">&copy; 2026 BOUNTYUNC. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
