@@ -1046,11 +1046,14 @@ a {
 
 .embed-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
+  justify-items: center;
 }
 
 .embed-box {
+  width: 100%;
+  max-width: 1140px;
   background: var(--ink-soft);
   border: 3px solid rgba(255, 255, 255, 0.15);
   overflow: hidden;
@@ -1082,7 +1085,8 @@ a {
 
 .embed-box iframe {
   width: 100%;
-  height: 520px;
+  height: min(72vh, 720px);
+  min-height: 480px;
   border: none;
   display: block;
   background: #111;
@@ -1207,9 +1211,6 @@ a {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .embed-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 768px) {
